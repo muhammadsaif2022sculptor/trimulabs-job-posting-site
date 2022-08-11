@@ -28,35 +28,46 @@ export const useGetAllJobs = () => {
 }
 
 // custom hook to fetch single job
-// export const useGetJob = (companySlug, jobSlug) => {
-//   const GET_JOB = gql`
-//   query {
-//     job(input: {
-//       companySlug: ${companySlug}
-//       jobSlug: ${jobSlug}
-//     }){
-//       id,
-//       title
-//       slug
-//       commitment
-//       cities
-//       countries
-//       remotes
-//       description
-//       applyUrl
-//       company
-//       tags
-//       isPublished
-//       isFeatured
-//       locationNames
-//       userEmail
-//       postedAt
-//       createdAt
-//       updatedAt
-//     }
-//   }`;
+export const useGetJob = (companySlug, jobSlug) => {
+  const GET_JOB = gql`
+  query {
+    job(input: {
+      companySlug: "${companySlug}"
+      jobSlug: "${jobSlug}"
+    }){
+      id,
+      title
+      slug
+      commitment {
+        title
+      }
+      cities {
+        id
+        name
+      }
+      remotes {
+        id
+        name
+      }
+      applyUrl
+      company{
+        name
+        websiteUrl
+      }
+      tags{
+        id
+        name
+      }
+      isPublished
+      isFeatured
+      userEmail
+      postedAt
+      updatedAt 
+      description
+    }
+  }`;
 
-//   return useQuery(GET_JOB)
-// }
+  return useQuery(GET_JOB)
+}
 
 

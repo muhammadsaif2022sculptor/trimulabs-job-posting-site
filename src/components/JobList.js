@@ -6,9 +6,9 @@ function JobList({jobs}) {
     return (
     <div className="cards-container"> 
         {jobs.map(job => (
-            <Job key={job.id} title={job.title} company={job.company.name} 
+            <Job key={job.id} title={job.title} company={job.company} 
             isPublished={job.isPublished} userEmail={job.userEmail} description={job.description} 
-            id={job.id} url={job.applyUrl}/>
+            slug={job.slug} url={job.applyUrl}/>
         ))}
     </div>
   )
