@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.830);
+  z-index: 1;
+}
+
+.loading {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3df18b transparent #3df18b transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.job-conatiner{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.job-wraper{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.search{
+  width: 97%;
+  padding: 5px 10px;
+  border-radius: 50px;
+  border-width: 1px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  box-shadow: rgba(125, 125, 135, 0.25) 0px 6px 12px -2px,
+    rgba(108, 104, 104, 0.3) 0px 3px 7px -3px;
+}
+
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 25px;
+  height: 75vh;
+  overflow: scroll;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 170px;
+  width: 200px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-bottom: 12px;
+  text-align: left;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card-title{
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.card-company{
+  font-weight: 600;
+  font-size: 10px;
+  color: #37d079;
+}
+
+.card-email{
+  font-weight: 200;
+  font-size: 10px;
+  color: #3b3b3b;
+}
+
+.card-desc{
+  font-weight: 200;
+  font-size: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #3b3b3b;
+}
+
+
+.isPublished{
+  font-weight: 200;
+  font-size: 8px;
+  color: #07a817;
+}
+
+.closed{
+  font-weight: 200;
+  font-size: 8px;
+  color: #a80707;
+}
+
+.card-apply{
+  border-radius: 5px;
+  background-color: #37d079;
+  font-weight: 200;
+  font-size: 12px;
+  padding: 5px 12px;
+}
+
+.card-apply:hover{
+  cursor: pointer;
+  background-color:#2eb468;
+}
+
+.card-detail{
+  border-radius: 5px;
+  background-color: #c6c6c6;
+  font-weight: 200;
+  font-size: 12px;
+  padding: 5px 12px;
+}
+
+.card-detail:hover{
+  cursor: pointer;
+  background-color: #9a9a9a;
+}
