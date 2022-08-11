@@ -17,12 +17,12 @@ function Job({title, company, isPublished, userEmail, description, url , slug}) 
         </div>
         <div className="card-desc">{description}</div>
         <div>
-        <a href={url} target='new'>
-            <button className="card-apply">Apply</button>
-        </a>
-        <Link to={'/detail/' + company.slug + '/' + slug}>
-            <button className="card-detail">Detail</button>
-        </Link>
+            <a href={url} target='new'>
+                <button className="card-apply">Apply</button>
+            </a>
+            <Link to={'/detail/' + company.slug + '/' + slug}>
+                <button className="card-detail">Detail</button>
+            </Link>
         </div>
     </div>
   )

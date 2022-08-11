@@ -1,15 +1,8 @@
-import React, { useState } from 'react'
-import { useGetAllJobs } from '../Apollo/Queries'
+import React from 'react'
 import JobList from './JobList'
-import Loading from './Loading'
 import Search from './Search'
 
-function Home() {
-
-    const {loading, data} = useGetAllJobs()
-    const [jobs, setJobs] = useState([])
-
-    if(loading) return <Loading />
+function Home({data, jobs, setJobs}) {
 
   return (
     <div className='conatiner'>
