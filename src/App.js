@@ -10,6 +10,7 @@ function App() {
       <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/detail/:companySlug/:jobSlug" element={<Detail />} />
+          <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
       </div>
     </Router>
